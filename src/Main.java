@@ -4,7 +4,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         int num1;
-        float num2, soma=0, tempF,tempC,tempK, mSeg,kmHora;
+        float num2, soma=0, tempF,tempC,tempK, mSeg,kmHora,distMilhas,distKm,angGr,angRad;
 
         System.out.println("Informe qual questão deseja visualizar;(1 - 53)");
         int questao = scan.nextInt();
@@ -79,6 +79,35 @@ public class Main {
                 mSeg = (float) (kmHora/3.6);
                 System.out.println("A velocidade informada em m/s é de " + mSeg + "metros por segundo");
             break;
-        }
+            // Q11 - Leia uma velocidade em m/s e apresente-a convertida em km/h.
+            case 11:
+                System.out.println("Informe uma velocidade em m/s:");
+                mSeg = scan.nextFloat();
+                kmHora = (float) (mSeg*3.6);
+                System.out.println("A velocidade informada em Km/h é de " + kmHora + "Quilômetros por hora");
+            break;
+            // Q12 - Leia uma distancia em milhas e apresente-a convertida em quilometros
+            case 12:
+                System.out.println("Informe a distância em milhas!");
+                distMilhas = scan.nextFloat();
+                distKm = (float) (distMilhas*1.61);
+                System.out.println("A distância informada em Km é de " + distKm + "Quilômetros");
+            break;
+            // Q13 - Leia uma distancia em quilômetros e apresente-a convertida em milhas.
+            case 13:
+                System.out.println("Informe a distância em Quilômetros!");
+                distKm = scan.nextFloat();
+                distMilhas = (float) (distKm*1.61);
+                System.out.println("A distância informada em milhas é de " + distMilhas + "Milhas");
+                break;
+            // Q14 - Leia um angulo em graus e apresente-o convertido em radianos.
+            case 14:
+                System.out.println("Informe um angulo em graus!");
+                angGr = scan.nextFloat();
+                angRad = (float) (angGr * Math.PI/180);
+                System.out.printf("O ângulo informado em radianos é %.2f %n",angRad);
+            break;
+            // Q15 - Leia um angulo em radianos e apresente-o convertido em graus.
+            
     }
 }
